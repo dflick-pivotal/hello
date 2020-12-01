@@ -3,6 +3,8 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+.kubernetes/my_serviceaccount_config.sh
+serviceaccount.yml
 
 ### STS ###
 .apt_generated

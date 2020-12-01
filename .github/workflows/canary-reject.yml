@@ -18,12 +18,12 @@ jobs:
         with:
           method: kubeconfig
           kubeconfig: '${{ secrets.KUBECONFIG_SA_GITHUB }}'
-          context: df-tbs
+          context: default-context
         id: setcontext
       - name: Do reject
         uses: azure/k8s-deploy@v1
         with:
-          images: docker.io/df-tbs/hello:${{ github.event.inputs.image_tag }}
+          images: docker.io/dflickpivota/hello:${{ github.event.inputs.image_tag }}
           manifests: |
             .kubernetes/deploy.yml
           strategy: canary

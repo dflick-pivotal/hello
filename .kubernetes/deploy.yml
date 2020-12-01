@@ -30,7 +30,7 @@ spec:
         app: hello
     spec:
       containers:
-        - image: docker.io/lemberski/hello:latest
+        - image: docker.io/dflickpivota/hello:latest
           name: hello
           ports:
             - containerPort: 8080

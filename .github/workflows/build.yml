@@ -44,13 +44,13 @@ jobs:
         with:
           method: kubeconfig
           kubeconfig: '${{ secrets.KUBECONFIG_SA_GITHUB }}'
-          context: nlemberski-aws-tas
+          context: df-tbs
         id: setcontext
 
       - name: Deploy to Kubernetes
         uses: azure/k8s-deploy@v1
         with:
-          images: docker.io/lemberski/hello:${{steps.vars.outputs.tag}}
+          images: docker.io/dflickpivota/hello:${{steps.vars.outputs.tag}}
           manifests: |
             .kubernetes/deploy.yml
           strategy: canary

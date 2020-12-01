@@ -24,7 +24,7 @@ clusters:
 contexts:
 - name: default-context
   context:
-    cluster: nlemberski-aws-tas
+    cluster: df-tbs
     namespace: default
     user: $serviceaccount
 current-context: default-context

@@ -1,14 +1,8 @@
 name: Build, push and deploy
 
-#on:
-#  release:
-#    types: [created]
 on:
-  workflow_dispatch:
-    inputs:
-      comment:
-        description: 'Release comment'
-        required: false
+  release:
+    types: [created]
 
 jobs:
   build:

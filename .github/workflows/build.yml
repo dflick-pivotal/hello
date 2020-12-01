@@ -31,13 +31,13 @@ jobs:
         run: echo ::set-output name=tag::$(echo ${GITHUB_REF:10})
 
       - name: Tag image
-        run: docker tag hello:0.0.1-SNAPSHOT lemberski/hello:${{steps.vars.outputs.tag}}
+        run: docker tag hello:0.0.1-SNAPSHOT dflickpivota/hello:${{steps.vars.outputs.tag}}
 
       - name: Publish image
-        run: docker push lemberski/hello:${{steps.vars.outputs.tag}}
+        run: docker push dflickpivota/hello:${{steps.vars.outputs.tag}}
 
       - name: Print image name
-        run: echo lemberski/hello:${{steps.vars.outputs.tag}}
+        run: echo dflickpivota/hello:${{steps.vars.outputs.tag}}
 
       - name: Kubernetes context
         uses: azure/k8s-set-context@v1
